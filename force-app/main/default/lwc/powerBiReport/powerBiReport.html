@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title={reportTitle} icon-name="utility:graph">
+      <div class="slds-var-m-around_medium">
+        <template if:true={report.data}>
+          <template if:true={report.data.error}>
+            <div>{report.data.error}</div>
+          </template>
+        </template>
+        <template if:true={report.data}>
+          <template if:true={report.data.embedUrl}>
+            <div data-id="embed-container" style="height: 650px"></div>
+          </template>
+        </template>
+      </div>
+    </lightning-card>
+  </template>
